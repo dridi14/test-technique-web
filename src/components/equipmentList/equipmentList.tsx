@@ -36,34 +36,34 @@ const EquipmentList: React.FC = () => {
 
   return (
     <div className="equipment-list-container">
-      <h1>Equipment List</h1>
+      <h1>Liste d'équipement</h1>
       <table className="equipment-table">
         <thead>
           <tr>
-            <th>Photo</th>
-            <th>Name</th>
-            <th>Domain</th>
-            <th>Number of Faults</th>
+            <th>Image</th>
+            <th>Nom</th>
+            <th>Domaine</th>
+            <th>Nombre de défauts</th>
           </tr>
           <tr>
             <th></th>
             <th>
               <SearchBar
-                placeholder="Search by name"
+                placeholder="Rechercher par nom"
                 value={searchTerms.name}
                 onChange={(value) => handleSearchChange('name', value)}
               />
             </th>
             <th>
               <SearchBar
-                placeholder="Search by domain"
+                placeholder="Recherche par domaine"
                 value={searchTerms.domain}
                 onChange={(value) => handleSearchChange('domain', value)}
               />
             </th>
             <th>
               <SearchBar
-                placeholder="Search by number of faults"
+                placeholder="Recherche par nombre de défauts"
                 value={searchTerms.nbFaults}
                 onChange={(value) => handleSearchChange('nbFaults', value)}
               />
