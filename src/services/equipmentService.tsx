@@ -55,7 +55,30 @@ export const getFilteredEquipments = (searchTerm: string): Equipment[] => {
  * @returns {Promise<Equipment | null>} - Equipment object or null if not found
  */
 export const fetchEquipmentByKey = async (equipmentKey: string): Promise<Equipment | null> => {
+  if (equipments.length === 0) {
+    await fetchEquipments()
+  }
   const equipment = equipments.find(e => e.equipmentKey === equipmentKey) || null;
   return equipment;
 };
 
+/**
+ * Filters equipments by a specific property.
+ * @param {string} searchWord - The search term.
+ * @param {keyof Equipment} property - The property to search in.
+ * @returns {Equipment[]} - Array of filtered equipments
+ */
+export const filterEquipmentsByProperty = (searchWord: string, property: keyof Equipment): Equipment[] => {
+  const term = searchWord.toLowerCase();
+  return equipments.filter(
+    (equipment) => {
+      const prop = equipment[property];
+      if (typeof prop === 'string') {
+        return prop.toLowerCase().includes(term);
+      } else if (typeof prop === 'number') {
+        return prop.toString().includes(term);
+      }
+      return false;
+    }
+  );
+};

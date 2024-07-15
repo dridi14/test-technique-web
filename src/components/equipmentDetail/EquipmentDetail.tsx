@@ -30,7 +30,7 @@ const EquipmentDetail: React.FC = () => {
   return (
     <div className="equipment-detail-container">
       <h1>{equipment.name}</h1>
-      <img src={equipment.photo} alt={equipment.name} className="equipment-photo" />
+      <img src={equipment.photo} alt={equipment.name} className="equipment-detail-photo" />
       <div className="equipment-info">
         <h2>General Info</h2>
         <p><strong>Domain:</strong> {equipment.domain}</p>

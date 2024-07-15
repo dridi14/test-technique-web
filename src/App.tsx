@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import EquipmentList from './components/equipmentList/equipmentList';
 import EquipmentDetail from './components/equipmentDetail/EquipmentDetail';
-import './App.css';
+import Header from './components/commons/header';
 
 const App: React.FC = () => {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route path="/" element={<EquipmentList />} />
         <Route path="/equipment/:equipmentKey" element={<EquipmentDetail />} />

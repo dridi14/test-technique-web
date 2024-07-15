@@ -3,27 +3,26 @@
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-  }
-  
-  .equipment-photo {
+}
+
+.equipment-detail-photo {
     width: 300px;
     height: 300px;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 20px;
-  }
-  
-  .equipment-info,
-  .equipment-characteristics,
-  .equipment-checkpoints {
+}
+
+.equipment-info,
+.equipment-characteristics,
+.equipment-checkpoints {
     text-align: left;
     margin-bottom: 20px;
-  }
-  
-  .checkpoint-item {
+}
+
+.checkpoint-item {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-  }
-  
+}
