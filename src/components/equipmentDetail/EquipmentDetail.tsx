@@ -54,9 +54,12 @@ const EquipmentDetail: React.FC = () => {
           <h2>Points de contrôle</h2>
           {checkpoints.map((checkpoint, index) => (
             <div key={index} className="checkpoint-item">
-              <p><strong>Points de contrôle: </strong> {checkpoint.name}</p>
-              {checkpoint.fault && <p><strong>Défaut:</strong> {checkpoint.fault}</p>}
-              {checkpoint.recommendation && <p><strong>Recommandation:</strong> {checkpoint.recommendation}</p>}
+              <div>
+                <p><strong>Points de contrôle: </strong> {checkpoint.name}</p>
+                {checkpoint.fault && <p><strong>Défaut:</strong> {checkpoint.fault}</p>}
+                {checkpoint.recommendation && <p><strong>Recommandation:</strong> {checkpoint.recommendation}</p>}
+              </div>
+              {checkpoint.photo && <img src={checkpoint.photo} alt={checkpoint.name} className="checkpoint-photo" />}
             </div>
           ))}
         </div>

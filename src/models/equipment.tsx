@@ -16,12 +16,12 @@ export interface Equipment {
     equipmentKey?: string;
     nbFaults: number;
 }
-  
+
 /** Checkpoint model definition **/
 export interface Checkpoint {
     equipmentKey: string;
     name: string;
     fault?: string;
     recommendation?: string;
+    photo?: string;
 }
-  
