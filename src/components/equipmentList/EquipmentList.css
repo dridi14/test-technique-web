@@ -1,0 +1,46 @@
+.equipment-list-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.equipment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.equipment-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.equipment-item:hover {
+    background-color: #f9f9f9;
+}
+
+.equipment-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.equipment-info {
+    text-align: left;
+}
+
+.equipment-info h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.equipment-info p {
+    margin: 5px 0;
+}
