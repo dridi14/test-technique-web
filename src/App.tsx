@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import EquipmentList from './components/equipmentList/EquipmentList';
 import EquipmentDetail from './components/equipmentDetail/EquipmentDetail';
 import Header from './components/commons/header';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 const App: React.FC = () => {
   return (

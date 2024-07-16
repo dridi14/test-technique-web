@@ -82,3 +82,25 @@ export const filterEquipmentsByProperty = (searchWord: string, property: keyof E
     }
   );
 };
+
+/**
+ * Sorts equipments by a specific property.
+ * @param {Equipment[]} equipments - Array of equipments to sort.
+ * @param {keyof Equipment} key - The property to sort by.
+ * @param {'asc' | 'desc'} order - The sorting order.
+ * @returns {Equipment[]} - Array of sorted equipments
+ */
+export const sortEquipments = (
+  equipmentList: Equipment[],
+  key: keyof Equipment,
+  order: 'asc' | 'desc'
+): Equipment[] => {
+  return [...equipmentList].sort((a, b) => {
+    if (typeof a[key] === 'string' && typeof b[key] === 'string') {
+      return order === 'asc' ? a[key].localeCompare(b[key]) : b[key].localeCompare(a[key]);
+    } else if (typeof a[key] === 'number' && typeof b[key] === 'number') {
+      return order === 'asc' ? a[key] - b[key] : b[key] - a[key];
+    }
+    return 0;
+  });
+};
