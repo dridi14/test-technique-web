@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { fetchEquipmentByKey } from '../../services/equipmentService';
-import { fetchCheckpointsByEquipmentKey } from '../../services/checkpointService';
-import { Equipment, Checkpoint } from '../../models/equipment';
+import { fetchEquipmentByKey } from '../../services/EquipmentService';
+import { fetchCheckpointsByEquipmentKey } from '../../services/CheckpointService';
+import { Equipment, Checkpoint } from '../../models/Equipment';
 
 import './EquipmentDetail.css';
 

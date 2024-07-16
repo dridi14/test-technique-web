@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { fetchEquipments } from '../../services/equipmentService';
-import EquipmentListItem from './equipmentListItem';
-import { Equipment } from '../../models/equipment';
+import { fetchEquipments } from '../../services/EquipmentService';
+import EquipmentListItem from './EquipmentListItem';
+import { Equipment } from '../../models/Equipment';
 import SearchBar from '../commons/SearchBar';
 import './EquipmentList.css';
 

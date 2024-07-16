@@ -1,18 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Equipment } from '../../models/equipment';
+import { Equipment } from '../../models/Equipment';
+import { useNavigate } from 'react-router-dom';
 
 interface EquipmentListItemProps {
   equipment: Equipment;
 }
 
 const EquipmentListItem: React.FC<EquipmentListItemProps> = ({ equipment }) => {
+
+  const navigate = useNavigate();
+
+  const navigateToDetailsPage = () => {
+    navigate(`/equipment/${equipment.equipmentKey}`);
+  };
+
   return (
-    <tr>
+    <tr onClick={navigateToDetailsPage} style={{ cursor: 'pointer' }}>
       <td className="equipment-photo-cell">
-        <Link to={`/equipment/${equipment.equipmentKey}`}>
-          <img src={equipment.photo} alt={equipment.name} className="equipment-photo" />
-        </Link>
+        <img src={equipment.photo} alt={equipment.name} className="equipment-photo" />
       </td>
       <td>{equipment.name}</td>
       <td>{equipment.domain}</td>

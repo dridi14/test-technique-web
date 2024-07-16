@@ -1,6 +1,6 @@
 import { ref, get } from 'firebase/database';
 import { database } from './firebase';
-import { Checkpoint } from '../models/equipment';
+import { Checkpoint } from '../models/Equipment';
 
 /**
  * Fetches checkpoints for a specific equipment by its serial number

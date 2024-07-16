@@ -1,6 +1,6 @@
 import { database } from './firebase';
 import { ref, get } from 'firebase/database';
-import { Equipment } from '../models/equipment';
+import { Equipment } from '../models/Equipment';
 
 let equipments: Equipment[] = [];
 
