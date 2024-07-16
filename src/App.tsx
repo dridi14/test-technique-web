@@ -10,7 +10,7 @@ const App: React.FC = () => {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<EquipmentList />} />
+        <Route path="/" element={<EquipmentList tableKey="equipmentList" />} />
         <Route path="/equipment/:equipmentKey" element={<EquipmentDetail />} />
       </Routes>
     </Router>
