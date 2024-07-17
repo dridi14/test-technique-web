@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom';
 
 interface EquipmentListItemProps {
   equipment: Equipment;
+  selectedProperties: string[];
 }
 
-const EquipmentListItem: React.FC<EquipmentListItemProps> = ({ equipment }) => {
-
+const EquipmentListItem: React.FC<EquipmentListItemProps> = ({ equipment, selectedProperties }) => {
   const navigate = useNavigate();
 
   const navigateToDetailsPage = () => {
@@ -19,9 +19,9 @@ const EquipmentListItem: React.FC<EquipmentListItemProps> = ({ equipment }) => {
       <td className="equipment-photo-cell">
         <img src={equipment.photo} alt={equipment.name} className="equipment-photo" />
       </td>
-      <td>{equipment.name}</td>
-      <td>{equipment.domain}</td>
-      <td>{equipment.nbFaults}</td>
+      {selectedProperties.map((property) => (
+        <td key={property}>{equipment[property as keyof Equipment]}</td>
+      ))}
     </tr>
   );
 };
